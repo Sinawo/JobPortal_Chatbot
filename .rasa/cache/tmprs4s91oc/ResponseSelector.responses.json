@@ -1,0 +1,207 @@
+{
+  "utter_chitchat/mood_great": [
+    {
+      "text": "Great, How may I help you?"
+    }
+  ],
+  "utter_chitchat/bot_challenge": [
+    {
+      "text": "😄 Hello, I am Aspire the MQA Chatbot! You can ask me a question by typing as well. Remember to always SIGN IN at the top right of the main page."
+    }
+  ],
+  "utter_app/scope_extension": [
+    {
+      "text": "Applicants must download the prescribed applications form from the MQA website and e-mail the completed application form and prescribed supporting documents to the designed e-mail address.\n"
+    }
+  ],
+  "utter_faq/assessor": [
+    {
+      "text": "People wishing to be registered as assessors with the MQA should:\n- Be found competent by an ETDPSETA accredited training provider, and\n- Be a subject matter expert (either through experience minimum of 2 years and qualification/s) in a mining and minerals related field in which they wish to assess.\n"
+    }
+  ],
+  "utter_faq/register_moderator": [
+    {
+      "text": "People wishing to be registered as moderators with the MQA should:\n- Be MQA registered assessors; and\n- Be found competent as moderators by an ETDPSETA accredited training provider.\n"
+    }
+  ],
+  "utter_faq/programme_approval": [
+    {
+      "text": "Companies wishing to receive Programme Approval from MQA should: \n Be accredited by another QA; \n \nHave a Quality Management System;\nHave an assessment system, including MQA registered assessors;\n Have a moderation system; and\n Have unit standard based learning material. However, you do not have to satisfy all the requirements in place, please download the Programme Approval Kit form under the Quality Assurance section.."
+    }
+  ],
+  "utter_faq/scope_extension": [
+    {
+      "text": "Applicants must download the prescribed applications form from the MQA website and e-mail the completed application form and prescribed supporting documents to the designed e-mail address.\n"
+    }
+  ],
+  "utter_faq/register_learner": [
+    {
+      "text": "Applicants must download the prescribed applications form from the MQA website and e-mail the completed application form and prescribed supporting documents to the designed e-mail address.\n"
+    }
+  ],
+  "utter_faq/mqa_certification": [
+    {
+      "text": "MQA certification is a recognized accreditation in the mining industry. The MQA will issue a certificate to registered learners who have completed a learning program and have passed all unit standards for a particular qualification. For more information, you can refer to the [Overview Brochure](https://mqa.org.za/wp-content/uploads/2021/08/Overview-Brochure.pdf)."
+    }
+  ],
+  "utter_faq/bursary_qualifies": [
+    {
+      "text": "The MQA Bursary Scheme is open to qualifying grade 12 learners or those currently writing their Grade 12 exams, and students who are studying towards a certificate, diploma, degree or BTech at a university or university of technology."
+    },
+    {
+      "text": "The Bursary is available to deserving South African Citizens as follows:      \n\nUnemployed individuals: Historically Disadvantaged Individuals with a strong academic record accompanied by a need for financial assistance      \n\nEmployed individuals: HDI’s individuals who are already employed within the Mining and Minerals Sector who would like to pursue studies for a qualification relevant to the mining related fields."
+    }
+  ],
+  "utter_faq/mqa_qualification": [
+    {
+      "text": "Companies wishing to receive Programme Approval from MQA should: Be accredited by another Quality Assurance (QA); Have a Quality Management System; Have an assessment system, including MQA registered assessors; Have a moderation system; and Have unit standard-based learning material."
+    }
+  ],
+  "utter_app/applications": [
+    {
+      "text": "Which application are you inquiring about?",
+      "buttons": [
+        {
+          "title": "🔍 Scope Extension Application",
+          "payload": "/app/scope_extension_application"
+        },
+        {
+          "title": "👔 Job Application",
+          "payload": "/app/jobs"
+        },
+        {
+          "title": "💰 Bursary Application",
+          "payload": "/app/bursary_application"
+        }
+      ]
+    }
+  ],
+  "utter_app/scope_extension_application": [
+    {
+      "text": "A company wishing to apply for scope for extension should:\nWrite a letter and complete the scope extension application form which can be obtained from the MQA Offices or website."
+    }
+  ],
+  "utter_app/jobs": [
+    {
+      "text": "The Mining Qualifications Authority (MQA) opens its application window annually between August and September. Visit [this link](https://mqa.org.za/mqa-vacancies/) for available job applications."
+    }
+  ],
+  "utter_app/bursary_application": [
+    {
+      "text": "The application window for the MQA Bursary opens annually between August and September. Applicants need to download the application form from the MQA website, complete it, and email it along with the required supporting documents to the designated email address. Successful candidates will receive notification of the outcome of their application by the end of November, enabling them to register for the subsequent year."
+    }
+  ],
+  "utter_faq/career_opportunities": [
+    {
+      "text": "Sure! Here are some career opportunities in the mining industry:",
+      "buttons": [
+        {
+          "title": "👩‍💼 Internships",
+          "payload": "/faq/career_internships"
+        },
+        {
+          "title": "📋 Vacancies",
+          "payload": "/faq/career_vacancies"
+        },
+        {
+          "title": "⛏️ Careers in Mining",
+          "payload": "/faq/career_mining"
+        },
+        {
+          "title": "📚 Learnerships",
+          "payload": "/faq/career_learneships"
+        },
+        {
+          "title": "🖼️ Career Gallery",
+          "payload": "/faq/career_gallery"
+        }
+      ]
+    }
+  ],
+  "utter_faq/career_internships": [
+    {
+      "text": "CRITERIA FOR THE LEARNERS TO BE PLACED BY HOST EMPLOYERS ON THE INTERNSHIP PROGRAMME\nThe MQA will only fund learners who meet the following criteria:\n- The learner is unemployed and a South African citizen\n- The graduates should have achieved the relevant qualification at a HET level (including TVET colleges, only N6 Diploma graduates are accepted into the programme)\n- Must not have benefitted from an internship programmes before whether MQA funded or company funded"
+    }
+  ],
+  "utter_faq/career_vacancies": [
+    {
+      "text": "Visit the [MQA Vacancies](https://mqa.org.za/mqa-vacancies) page to view available vacancies."
+    }
+  ],
+  "utter_faq/career_learnership": [
+    {
+      "text": "Employees of mining companies and unemployed learners who need to be placed with mining companies for on-the-job training. Note: Unemployed learners must approach mining companies to access training in learnerships, as the MQA only facilitates and funds training for mining and minerals sector employers."
+    }
+  ],
+  "utter_faq/career_mining": [
+    {
+      "text": "Learn more about careers in mining on the [MQA Careers in Mining](https://mqa.org.za/careers-in-mining/) page."
+    }
+  ],
+  "utter_faq/career_gallery": [
+    {
+      "text": "Explore the [MQA Career Gallery](https://mqa.org.za/career-gallery/) to see different career opportunities in the mining industry."
+    }
+  ],
+  "utter_faq/career_guidance": [
+    {
+      "text": "Sure! Here are some career guidance resources for the mining industry:",
+      "buttons": [
+        {
+          "title": "⛏️ Scarce Skills in Mining",
+          "payload": "/faq/scarce_skills"
+        },
+        {
+          "title": "📜 Certifications in Mining",
+          "payload": "/faq/certifications"
+        },
+        {
+          "title": "📄 CV Writing",
+          "payload": "/faq/cv"
+        },
+        {
+          "title": "💼 Career Advice",
+          "payload": "/faq/advice"
+        },
+        {
+          "title": "👥 Mentorship",
+          "payload": "/faq/mentorship"
+        },
+        {
+          "title": "🎙️ Interview Preparation",
+          "payload": "/faq/interview_preparation"
+        }
+      ]
+    }
+  ],
+  "utter_faq/scarce_skills": [
+    {
+      "text": "Explore the [Scarce Skills in Mining](https://mqa.org.za/scarce-skills/) page to learn more"
+    }
+  ],
+  "utter_faq/certifications": [
+    {
+      "text": "If a person wishes to be accredited with the MQA should fulfill the following requirements: Produce evidence that they are in the process of implementing or have achieved the ISO 9001:2008 standard; Have an assessment system, including MQA registered assessors; Have a moderation system; and Have unit standard based learning material."
+    }
+  ],
+  "utter_faq/cv": [
+    {
+      "text": "Learn about CV writing on the https://mqa.org.za/careers-brochure"
+    }
+  ],
+  "utter_faq/advice": [
+    {
+      "text": "Access the MQA Career Guide on the https://mqa.org.za/careers-brochure page."
+    }
+  ],
+  "utter_faq/mentorship": [
+    {
+      "text": "The MQA supports transformation of the mining and minerals sector through skills development. Training interventions such as the Workplace Mentor and Coaches Programme (WMCP) funded by MQA are aimed at placing mentors and coaches within workplaces to support employers and learners with on the job mentoring and coaching activities"
+    }
+  ],
+  "utter_faq/interview_preparation": [
+    {
+      "text": "Prepare for interviews with guidance from the https://www.indeed.com/career-advice/interviewing page."
+    }
+  ]
+}

@@ -1,0 +1,549 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - bot_challenge
+  - main_menu
+
+  - app
+  - faq
+  - chitchat
+  - contact_us
+  - outofscope
+
+  - contact_support
+
+  - questions  
+  - assessor
+  - moderator
+  - programme_approval
+  - register_learner
+  - scope_extension
+  - bursary_qualifies
+  - mqa_qualification
+
+
+
+  - applications
+  - jobs
+  - bursary_application
+  - scope_extension_application
+
+
+  - career_opportunities
+  - internships
+  - career_mining
+  - vacancies
+  - learnership
+  - gallery
+
+
+  - career_guidance
+  - scarce_skills
+  - certifications
+  - cv
+  - advice
+  - mentorship
+  - interview_preparation
+  
+
+
+
+
+
+entities:
+  - name
+  - number
+  - email
+  
+responses:
+  utter_welcome:
+    - text: "😄 Hello, I am Aspire the MQA Chatbot! You can ask me a question or choose an option below. Remember to always SIGN IN at the top right of the main page."
+      buttons:
+        - title: "💡 FAQ"
+          payload: "/questions"
+
+        - title: "📝 Applications"
+          payload: "/applications"
+
+        - title: "💼 Career Opportunities"
+          payload: "/career_opportunities"
+
+        - title: "🛠️ Career Guidance"
+          payload: "/career_guidance"
+          
+  utter_main_menu:
+    - text: "Here are your Menu options:"
+      buttons:
+        - title: "💡 FAQ"
+          payload: "/questions"
+
+        - title: "📝 Applications"
+          payload: "/applications"
+
+        - title: "💼 Career Opportunities"
+          payload: "/career_opportunities"
+
+        - title: "🛠️ Career Guidance"
+          payload: "/career_guidance"
+  
+  utter_greet:
+    - text: "Welcome. How is your day going?"
+    - text: "Hey! How are you?"
+    - text: "Hello there! How are you doing?"
+    - text: "Hi! Howzit?"
+
+  utter_chitchat/mood_great:
+    - text: "Great, How may I help you?"
+
+  utter_chitchat/bot_challenge:
+    - text: "😄 Hello, I am Aspire the MQA Chatbot! You can ask me a question by typing as well. Remember to always SIGN IN at the top right of the main page."
+  
+# FAQ clicked frquently asked questions----------------------------
+  utter_questions:
+    - text: "What would you like to know about MQA?"
+      buttons:
+
+        - title: "👨‍🏫 Register as Assessor"
+          payload: '/assessor'
+
+        - title: "👨‍🏫 Register as Moderator"
+          payload: '/moderator'
+
+        - title: "📋 Programme Approval"
+          payload: '/programme_approval'
+
+        - title: "🔍 Scope Extension"
+          payload: '/app/scope_extension' #needs an intent
+
+        - title: "📝 Register as Learner"
+          payload: '/register_learner'
+
+        - title: "💰 Bursary Qualifications"
+          payload: '/bursary_qualifies'
+#------------- FAQ Answers frquently asked questions---------------------------- 
+  utter_did_that_help:
+    - text: "Did that help you?"
+      buttons:
+        - title: "✅ Yes"
+          payload: /affirm 
+
+        - title: "❌ No"
+          payload: /deny
+
+# 1.1 Response for Assessor registration
+  utter_assessor:
+    - text: |
+        People wishing to be registered as assessors with the MQA should:
+        - Be found competent by an ETDPSETA accredited training provider, and
+        - Be a subject matter expert (either through experience minimum of 2 years and qualification/s) in a mining and minerals related field in which they wish to assess.
+
+  # 1.2 Response for Moderator registration
+  utter_moderator:
+    - text: |
+        People wishing to be registered as moderators with the MQA should:
+        - Be MQA registered assessors; and
+        - Be found competent as moderators by an ETDPSETA accredited training provider.
+
+  
+  # 1.3 HOW TO RECEIVE PROGRAMME APPROVAL FROM THE MQA?
+  utter_programme_approval:
+    - text: |
+        Companies wishing to receive Programme Approval from MQA should:
+        - Be accredited by another QA;
+        - Have a Quality Management System;
+        - Have an assessment system, including MQA registered assessors;
+        - Have a moderation system; and
+        - Have unit standard based learning material. However, you do not have to satisfy all the requirements in place, please download the Programme Approval Kit form under the Quality Assurance section.."
+
+  # 1.4 Response scope extension
+  utter_app/scope_extension: 
+    - text: |
+        Applicants must download the prescribed applications form from the MQA website and e-mail the completed application form and prescribed supporting documents to the designed e-mail address.
+ 
+  # 1.5. Response for Learner registration
+  utter_register_learner:
+    - text: |
+        Applicants must download the prescribed applications form from the MQA website and e-mail the completed application form and prescribed supporting documents to the designed e-mail address.
+  # 1.6
+  utter_mqa_certification:
+    - text: "MQA certification is a recognized accreditation in the mining industry. The MQA will issue a certificate to registered learners who have completed a learning program and have passed all unit standards for a particular qualification. For more information, you can refer to the [Overview Brochure](https://mqa.org.za/wp-content/uploads/2021/08/Overview-Brochure.pdf)."
+
+  # 1.7
+  utter_bursary_qualifies:
+    - text: "The MQA Bursary Scheme is open to qualifying grade 12 learners or those currently writing their Grade 12 exams, and students who are studying towards a certificate, diploma, degree or BTech at a university or university of technology."
+    - text: "The Bursary is available to deserving South African Citizens as follows:      \n\nUnemployed individuals: Historically Disadvantaged Individuals with a strong academic record accompanied by a need for financial assistance      \n\nEmployed individuals: HDI’s individuals who are already employed within the Mining and Minerals Sector who would like to pursue studies for a qualification relevant to the mining related fields."
+  # # 7
+  # utter_faq/mqa_qualification:
+  #   - text: "Companies wishing to receive Programme Approval from MQA should: Be accredited by another Quality Assurance (QA); Have a Quality Management System; Have an assessment system, including MQA registered assessors; Have a moderation system; and Have unit standard-based learning material."
+
+
+
+#----------- Applications clicked the second option-----------------
+
+
+  utter_applications:
+    - text: "Which application are you inquiring about?"
+      buttons:   
+
+        - title: "👔 Job Application"
+          payload: '/jobs'
+
+        - title: "💰 Bursary Application"
+          payload: '/bursary_application'
+
+        - title: "🔍 Scope Extension Application"
+          payload: '/scope_extension_application'
+
+  utter_scope_extension_application:
+    - text: "A company wishing to apply for scope for extension should:\nWrite a letter and complete the scope extension application form which can be obtained from the MQA Offices or website."
+
+  utter_jobs:
+    - text: "The Mining Qualifications Authority (MQA) opens its application window annually between August and September. Visit [this link](https://mqa.org.za/mqa-vacancies/) for available job applications."
+  
+  utter_bursary_application:
+    - text: "The application window for the MQA Bursary opens annually between August and September. Applicants need to download the application form from the MQA website, complete it, and email it along with the required supporting documents to the designated email address. Successful candidates will receive notification of the outcome of their application by the end of November, enabling them to register for the subsequent year."
+
+
+#---------------------Career Oppotunities ---------------
+
+  utter_career_opportunities:
+    - text: "Sure! Here are some career opportunities in the mining industry:"
+      buttons:
+
+
+        - title: "👩‍💼 Internships"
+          payload: '/internships'
+
+        - title: "📋 Vacancies"
+          payload: '/vacancies'
+
+        - title: "⛏️ Careers in Mining"
+          payload: '/career_mining'
+
+        - title: "📚 Learnerships"
+          payload: '/learnership'
+
+        - title: "🖼️ Career Gallery"
+          payload: '/gallery'
+  utter_internships:
+    - text: "CRITERIA FOR THE LEARNERS TO BE PLACED BY HOST EMPLOYERS ON THE INTERNSHIP PROGRAMME\nThe MQA will only fund learners who meet the following criteria:\n- The learner is unemployed and a South African citizen\n- The graduates should have achieved the relevant qualification at a HET level (including TVET colleges, only N6 Diploma graduates are accepted into the programme)\n- Must not have benefitted from an internship programmes before whether MQA funded or company funded"
+
+  utter_vacancies:
+    - text: "Visit the [MQA Vacancies](https://mqa.org.za/mqa-vacancies) page to view available vacancies."
+
+  utter_career_mining:
+    - text: "Learn more about careers in mining on the [MQA Careers in Mining](https://mqa.org.za/careers-in-mining/) page."
+
+  utter_learnership:
+    - text: "Employees of mining companies and unemployed learners who need to be placed with mining companies for on-the-job training. Note: Unemployed learners must approach mining companies to access training in learnerships, as the MQA only facilitates and funds training for mining and minerals sector employers."
+
+  utter_gallery:
+    - text: "Explore the [MQA Career Gallery](https://mqa.org.za/career-gallery/) to see different career opportunities in the mining industry."
+
+#------------------------Career Guidance--------
+
+  utter_career_guidance:
+    - text: "Sure! Here are some career guidance resources for the mining industry:"
+      buttons:
+        - title: "⛏️ Scarce Skills in Mining"
+          payload: '/scarce_skills'
+
+        - title: "📜 Certifications in Mining"
+          payload: '/certifications'
+
+        - title: "📄 CV Writing"
+          payload: '/cv'
+
+        - title: "💼 Career Advice"
+          payload: '/advice'
+
+        - title: "👥 Mentorship"
+          payload: '/mentorship'
+
+        - title: "🎙️ Interview Preparation"
+          payload: '/interview_preparation'
+
+  utter_scarce_skills:
+    - text: "Explore the [Scarce Skills in Mining](https://mqa.org.za/scarce-skills/) page to learn more"
+
+  utter_certifications:
+    - text: "If a person wishes to be accredited with the MQA should fulfill the following requirements: Produce evidence that they are in the process of implementing or have achieved the ISO 9001:2008 standard; Have an assessment system, including MQA registered assessors; Have a moderation system; and Have unit standard based learning material."
+
+  utter_cv:
+      - text: "Learn about CV writing on the https://mqa.org.za/careers-brochure"
+  
+  utter_advice:
+      - text: "Access the MQA Career Guide on the https://mqa.org.za/careers-brochure page."
+
+  utter_mentorship:
+    - text: "The MQA supports transformation of the mining and minerals sector through skills development. Training interventions such as the Workplace Mentor and Coaches Programme (WMCP) funded by MQA are aimed at placing mentors and coaches within workplaces to support employers and learners with on the job mentoring and coaching activities"
+  
+  utter_interview_preparation:
+    - text: "Prepare for interviews with guidance from the https://www.indeed.com/career-advice/interviewing page."
+
+
+  utter_outofscope:
+    - text: "Sorry, I wasn't able to understand. Could you please rephrase it?"
+
+  utter_ask_name:
+    - text: "Could you please tell me your name?"
+
+  utter_ask_email:
+    - text: "Can you please provide me your email address?"
+
+  utter_ask_number:
+    - text: "Can you please provide me your phone number?"
+
+  utter_ask_message:
+    - text: "Please tell me your query so I can forward that to our team."
+
+  utter_ask_confirm_details:
+    - buttons:
+        - title: "✅ Yes"
+          payload: /affirm 
+
+        - title: "❌ No"
+          payload: /deny
+      text: " These are the details I captured. Please confirm them below:        \n Name: {name}\n        \n Email: {email}\n       \n  Phone No: {number}\n       \n  Message: {message} \n"
+
+  utter_mail_success:
+    - text: "I have mailed all details to our team. You will be reverted back within 48hrs."
+
+  utter_mail_canceled:
+    - text: "I have canceled the mail. Anything else you want help with?"
+
+  utter_goodbye:
+    - text: "Bye"
+
+
+#for typing ------------- FAQ Answers frquently asked questions---------------------------- 
+  # 1.1 Response for Assessor registration
+  utter_faq/assessor:
+    - text: |
+        People wishing to be registered as assessors with the MQA should:
+        - Be found competent by an ETDPSETA accredited training provider, and
+        - Be a subject matter expert (either through experience minimum of 2 years and qualification/s) in a mining and minerals related field in which they wish to assess.
+
+  # 1.2 Response for Moderator registration
+  utter_faq/register_moderator:
+    - text: |
+        People wishing to be registered as moderators with the MQA should:
+        - Be MQA registered assessors; and
+        - Be found competent as moderators by an ETDPSETA accredited training provider.
+
+  
+  # 1.3 HOW TO RECEIVE PROGRAMME APPROVAL FROM THE MQA?
+  utter_faq/programme_approval:
+    - text: "Companies wishing to receive Programme Approval from MQA should: \n Be accredited by another QA; \n \nHave a Quality Management System;\nHave an assessment system, including MQA registered assessors;\n Have a moderation system; and\n Have unit standard based learning material. However, you do not have to satisfy all the requirements in place, please download the Programme Approval Kit form under the Quality Assurance section.."
+
+  # 1.4 Response scope extension
+  utter_faq/scope_extension: 
+    - text: |
+        Applicants must download the prescribed applications form from the MQA website and e-mail the completed application form and prescribed supporting documents to the designed e-mail address.
+ 
+  # 1.5. Response for Learner registration
+  utter_faq/register_learner:
+    - text: |
+        Applicants must download the prescribed applications form from the MQA website and e-mail the completed application form and prescribed supporting documents to the designed e-mail address.
+  # 1.6
+  utter_faq/mqa_certification:
+    - text: "MQA certification is a recognized accreditation in the mining industry. The MQA will issue a certificate to registered learners who have completed a learning program and have passed all unit standards for a particular qualification. For more information, you can refer to the [Overview Brochure](https://mqa.org.za/wp-content/uploads/2021/08/Overview-Brochure.pdf)."
+
+  # 1.7
+  utter_faq/bursary_qualifies:
+    - text: "The MQA Bursary Scheme is open to qualifying grade 12 learners or those currently writing their Grade 12 exams, and students who are studying towards a certificate, diploma, degree or BTech at a university or university of technology."
+    - text: "The Bursary is available to deserving South African Citizens as follows:      \n\nUnemployed individuals: Historically Disadvantaged Individuals with a strong academic record accompanied by a need for financial assistance      \n\nEmployed individuals: HDI’s individuals who are already employed within the Mining and Minerals Sector who would like to pursue studies for a qualification relevant to the mining related fields."
+  # # 7
+  utter_faq/mqa_qualification:
+    - text: "Companies wishing to receive Programme Approval from MQA should: Be accredited by another Quality Assurance (QA); Have a Quality Management System; Have an assessment system, including MQA registered assessors; Have a moderation system; and Have unit standard-based learning material."
+
+
+
+#----------- Applications clicked the second option-----------------
+
+
+  utter_app/applications:
+    - text: "Which application are you inquiring about?"
+      buttons:
+
+          
+        - title: "🔍 Scope Extension Application"
+          payload: '/app/scope_extension_application'
+
+        - title: "👔 Job Application"
+          payload: '/app/jobs'
+
+        - title: "💰 Bursary Application"
+          payload: '/app/bursary_application'
+
+  utter_app/scope_extension_application:
+    - text: "A company wishing to apply for scope for extension should:\nWrite a letter and complete the scope extension application form which can be obtained from the MQA Offices or website."
+
+  utter_app/jobs:
+    - text: "The Mining Qualifications Authority (MQA) opens its application window annually between August and September. Visit [this link](https://mqa.org.za/mqa-vacancies/) for available job applications."
+  
+  utter_app/bursary_application:
+    - text: "The application window for the MQA Bursary opens annually between August and September. Applicants need to download the application form from the MQA website, complete it, and email it along with the required supporting documents to the designated email address. Successful candidates will receive notification of the outcome of their application by the end of November, enabling them to register for the subsequent year."
+
+
+#---------------------Career Opuyunities ---------------
+
+  utter_faq/career_opportunities:
+    - text: "Sure! Here are some career opportunities in the mining industry:"
+      buttons:
+        - title: "👩‍💼 Internships"
+          payload: '/faq/career_internships'
+
+        - title: "📋 Vacancies"
+          payload: '/faq/career_vacancies'
+
+        - title: "⛏️ Careers in Mining"
+          payload: '/faq/career_mining'
+
+        - title: "📚 Learnerships"
+          payload: '/faq/career_learneships'
+
+        - title: "🖼️ Career Gallery"
+          payload: '/faq/career_gallery'
+
+  utter_faq/career_internships:
+    - text: "CRITERIA FOR THE LEARNERS TO BE PLACED BY HOST EMPLOYERS ON THE INTERNSHIP PROGRAMME\nThe MQA will only fund learners who meet the following criteria:\n- The learner is unemployed and a South African citizen\n- The graduates should have achieved the relevant qualification at a HET level (including TVET colleges, only N6 Diploma graduates are accepted into the programme)\n- Must not have benefitted from an internship programmes before whether MQA funded or company funded"
+
+  utter_faq/career_vacancies:
+    - text: "Visit the [MQA Vacancies](https://mqa.org.za/mqa-vacancies) page to view available vacancies."
+
+  utter_faq/career_learnership:
+    - text: "Employees of mining companies and unemployed learners who need to be placed with mining companies for on-the-job training. Note: Unemployed learners must approach mining companies to access training in learnerships, as the MQA only facilitates and funds training for mining and minerals sector employers."
+
+  utter_faq/career_mining:
+    - text: "Learn more about careers in mining on the [MQA Careers in Mining](https://mqa.org.za/careers-in-mining/) page."
+
+  utter_faq/career_gallery:
+    - text: "Explore the [MQA Career Gallery](https://mqa.org.za/career-gallery/) to see different career opportunities in the mining industry."
+
+#------------------------Career Guidance--------
+
+  utter_faq/career_guidance:
+    - text: "Sure! Here are some career guidance resources for the mining industry:"
+      buttons:
+        - title: "⛏️ Scarce Skills in Mining"
+          payload: '/faq/scarce_skills'
+
+        - title: "📜 Certifications in Mining"
+          payload: '/faq/certifications'
+
+        - title: "📄 CV Writing"
+          payload: '/faq/cv'
+
+        - title: "💼 Career Advice"
+          payload: '/faq/advice'
+
+        - title: "👥 Mentorship"
+          payload: '/faq/mentorship'
+
+        - title: "🎙️ Interview Preparation"
+          payload: '/faq/interview_preparation'
+
+  utter_faq/scarce_skills:
+    - text: "Explore the [Scarce Skills in Mining](https://mqa.org.za/scarce-skills/) page to learn more"
+
+  utter_faq/certifications:
+    - text: "If a person wishes to be accredited with the MQA should fulfill the following requirements: Produce evidence that they are in the process of implementing or have achieved the ISO 9001:2008 standard; Have an assessment system, including MQA registered assessors; Have a moderation system; and Have unit standard based learning material."
+
+  utter_faq/cv:
+      - text: "Learn about CV writing on the https://mqa.org.za/careers-brochure"
+  
+  utter_faq/advice:
+      - text: "Access the MQA Career Guide on the https://mqa.org.za/careers-brochure page."
+
+  utter_faq/mentorship:
+    - text: "The MQA supports transformation of the mining and minerals sector through skills development. Training interventions such as the Workplace Mentor and Coaches Programme (WMCP) funded by MQA are aimed at placing mentors and coaches within workplaces to support employers and learners with on the job mentoring and coaching activities"
+  
+  utter_faq/interview_preparation:
+    - text: "Prepare for interviews with guidance from the https://www.indeed.com/career-advice/interviewing page."
+
+
+
+
+
+
+slots:
+
+
+  # logged_in:
+  #   type: bool
+  #   influence_conversation: false
+  #   mappings:
+  #   - type: custom
+
+  name:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: contact_us_form
+            requested_slot: name
+
+  email:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: contact_us_form
+            requested_slot: email
+
+  number:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: contact_us_form
+            requested_slot: number
+
+  message:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: contact_us_form
+            requested_slot: message
+
+  confirm_details:
+    type: any
+    mappings:
+      - type: from_intent
+        intent: affirm
+        value: yes
+      - type: from_intent
+        intent: deny
+        value: no
+
+
+
+actions:
+  - validate_contact_us_form
+  - action_submit_contact_us_form
+  - action_send_html_form
+
+
+forms:
+  contact_us_form:
+    required_slots:
+      - name
+      - number
+      - email
+      - message
+      - confirm_details
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

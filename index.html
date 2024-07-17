@@ -1,0 +1,97 @@
+<html>
+<body>
+
+  <style>
+    .rw-launcher .rw-tooltip-body .rw-reply{ background-color: #397D47; border: 0px; color: #242479;}
+    .rw-conversation-container .rw-header{ background-color: #242676; }
+    .rw-conversation-container .rw-messages-container .rw-client{ background-color: #F28F2D; color: ffffff;}
+
+ /* F28F2D
+397D47
+ 242479 */
+    </style>
+<!-- 
+
+
+<form id="nameForm" onsubmit="submitForm()">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname"><br><br>
+  <button type="submit">Submit</button>
+</form> 
+
+-->
+
+<script>
+function submitForm() {
+  var firstName = document.getElementById("fname").value;
+  var lastName = document.getElementById("lname").value;
+  var message = "/submit_name{\"first_name\": \"" + firstName + "\", \"last_name\": \"" + lastName + "\"}";
+  // Send the message to Rasa
+  sendMessage(message);
+}
+</script>
+
+
+    
+
+ <script>!(function () { 
+      let e = document.createElement("script"),
+        t = document.head || document.getElementsByTagName("head")[0];
+      (e.src =
+        "https://cdn.jsdelivr.net/npm/rasa-webchat@1.x.x/lib/index.js"),
+        // Replace 1.x.x with the version that you want
+        (e.async = !0),
+        (e.onload = () => {
+          window.WebChat.default(
+            {
+              initPayload: '/greet',
+              customData: { language: "en" },
+              socketUrl: "http://localhost:5005",
+              title: "OLSM&O",
+              subtitle: 'Say hi to get started!',
+              profileAvatar: "./utils/assets/svg/robot.svg",
+              showCloseButton:"./utils/assets/svg/times.svg",
+              openLauncherImage: "./utils/assets/svg/robot.svg",
+              showFullScreenButton: "./utils/assets/svg/full-screen.svg",
+              closeImage: "./utils/assets/svg/close_button.svg", 
+              inputTextFieldHint: "Type here...",
+              
+              showMessageDate: true , 
+
+               <!-- Online Learner Skills Matrix & Qualifications Portal -->
+
+              // add other props here
+            },
+            null
+          );
+        }),
+        t.insertBefore(e, t.firstChild);
+    })();
+    
+  </script>
+
+
+<!-- <head>
+  <link rel="stylesheet" href="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.css" />
+</head>
+<body>
+  <div class="chat-container"></div>
+
+  <script src="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.js"/></script>
+  <script type="text/javascript">
+    var chatroom = new window.Chatroom({
+      host: "http://localhost:5005",
+      title: "Chat with Mike",
+      container: document.querySelector(".chat-container"),
+      welcomeMessage: "Hi, I am Mike. How may I help you?",
+      speechRecognition: "en-US",
+      voiceLang: "en-US"
+    });
+    chatroom.openChat();
+  </script> -->
+</body>
+
+
+</html>

@@ -1,0 +1,208 @@
+version: "3.1"
+
+stories:
+
+
+- story: chitchat
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_welcome
+  - intent: chitchat
+  - action: utter_chitchat
+
+# ---------------------------------------------
+- story: Contact Support
+  steps:
+  - intent: contact_support
+  - action: action_send_html_form 
+  # - action: action_send_html_form  
+
+#------------------------Career Guidance--------
+
+- story: To Career Guidance Menu
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_welcome
+  - intent: career_guidance
+  - action: utter_career_guidance
+
+
+- story: To Scarce Skills in Mining
+  steps:
+  - intent: scarce_skills
+  - action: utter_scarce_skills
+  - action: utter_main_menu
+
+- story: To Certifications in Mining
+  steps:
+  - intent: certifications
+  - action: utter_certifications
+  - action: utter_main_menu
+
+
+- story: To CV Writing
+  steps:
+  - intent: cv
+  - action: utter_cv
+  - action: utter_main_menu
+
+- story: To Career Advice
+  steps:
+  - intent: advice
+  - action: utter_advice
+  - action: utter_main_menu
+
+
+- story: To Mentorship
+  steps:
+  - intent: mentorship
+  - action: utter_mentorship
+  - action: utter_main_menu
+
+- story: To Interview Preparation
+  steps:
+  - intent: interview_preparation
+  - action: utter_interview_preparation
+  - action: utter_main_menu
+
+
+# ---------------------------------career_opportunities -----------------------------
+
+- story: To opportunities Menu
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_welcome
+  - intent: career_opportunities
+  - action: utter_career_opportunities
+
+- story: To Internship
+  steps:
+  - intent: internships
+  - action: utter_internships
+  - action: utter_main_menu
+
+- story: To Vacancies
+  steps:
+  - intent: vacancies
+  - action: utter_vacancies
+  - action: utter_main_menu
+
+
+- story: To Careers in Mining
+  steps:
+  - intent: career_mining
+  - action: utter_career_mining
+  - action: utter_main_menu
+
+- story: To Learnerships
+  steps:
+  - intent: learnership
+  - action: utter_learnership
+  - action: utter_main_menu
+
+
+- story: To Career Gallery
+  steps:
+  - intent: gallery
+  - action: utter_gallery
+  - action: utter_main_menu
+  
+# ---------------------------------- Applications---------------------------------
+- story: To Applications Menu
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_welcome
+  - intent: applications
+  - action: utter_applications 
+
+- story: To Job 
+  steps:
+  - intent: jobs
+  - action: utter_jobs
+  - action: utter_main_menu
+
+
+- story: To Bursary  
+  steps:
+  - intent: bursary_application
+  - action: utter_bursary_application
+  - action: utter_main_menu
+
+- story: To Scope Extension Application 
+  steps:
+  - intent: scope_extension_application
+  - action: utter_scope_extension_application
+  - action: utter_main_menu
+  
+
+
+
+#---------------------------------------------- To FAQ Menu -----------------------------------------------
+- story: To FAQ Menu
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_welcome
+  - intent: questions
+  - action: utter_questions
+
+- story: FAQ - Assessor
+  steps:
+  - intent: assessor
+  - action: utter_assessor
+  - action: utter_main_menu
+
+- story: FAQ - moderator
+  steps:
+  - intent: moderator
+  - action: utter_moderator
+  - action: utter_main_menu
+
+
+- story: FAQ - programme approval and Return to Main Menu
+  steps:
+  - intent: programme_approval
+  - action: utter_programme_approval
+  - action: utter_main_menu
+
+# - story: FAQ - SCOPE extension and Return to Main Menu
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - action: utter_welcome  
+#   - intent: faq/questions
+#   - action: utter_faq/questions
+#   - intent: faq/scope_extenstion
+#   - action: utter_faq/scope_extension
+#   - action: utter_main_menu
+
+- story: FAQ - register as learner and Return to Main Menu
+  steps:
+  - intent: register_learner
+  - action: utter_register_learner
+  - action: utter_main_menu
+
+
+
+- story: FAQ - busary  quilifies and Return to Main Menu
+  steps:
+
+  - intent: bursary_qualifies
+  - action: utter_bursary_qualifies
+  - action: utter_main_menu  
+
+
+#----------------------------------------------------------------------
+
+- story: contact us form
+  steps:
+  - intent: contact_us
+  - action: contact_us_form
+  - active_loop: contact_us_form
+
+
+

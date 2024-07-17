@@ -1,0 +1,36 @@
+version: "3.1"
+  # 1. APPLY?
+  # Job applications
+  # Bursary applications
+  # Scope extension applications 
+nlu:
+- intent: app/applications
+  examples: |
+    - Who can apply for MQA bursary?
+    - apply
+    - application
+    - applications
+    - I want to apply
+    - open applications
+
+- intent: app/jobs
+  examples: |
+    - job application
+    - apply for job
+    - job vacancies
+    - apply for position
+    - vacancies
+
+- intent: app/scope_extension_application
+  examples: |
+    - scope extension application
+    - scope extension
+    - extend scope
+    - request scope extension
+
+
+- intent: app/bursary_application
+  examples: |
+    - bursary application
+    - financial aid application
+    - bursary

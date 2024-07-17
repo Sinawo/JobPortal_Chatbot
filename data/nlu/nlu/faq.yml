@@ -1,0 +1,244 @@
+version: "3.1"
+
+nlu:
+
+
+- intent: faq/questions # this should should the buttons of faq
+  examples: |
+    - Tell me about MQA
+    - Frquently asked questions
+    - FAQ
+    - What is MQA?
+    - Can you provide information about the Mining Qualifications Authority?
+    - Explain MQA to me
+    - I want to know about MQA
+  # 1. APPLY?
+  # Job applications
+  # Bursary applications
+  # Scope extension applications 
+
+- intent: faq/applications
+  examples: |
+    - Who can apply for MQA bursary?
+    - apply
+    - application
+    - applications
+    - I want to apply
+    - open applications
+
+
+- intent: faq/scope_extension_application
+  examples: |
+    - scope extension application
+    - scope extension
+    - extend scope
+    - request scope extension
+
+- intent: faq/job_application
+  examples: |
+    - job application
+    - apply for job
+    - job vacancies
+    - apply for position
+    - vacancies
+
+- intent: faq/bursary_application
+  examples: |
+    - bursary application
+    - financial aid application
+    - bursary
+
+
+# 2. HOW TO RECEIVE PROGRAMME APPROVAL FROM THE MQA?
+- intent: faq/programme_approval
+  examples: |
+    - How to receive programme approval from the MQA?
+    - Programme approval process
+    - MQA programme approval requirements
+    - What are the steps to get programme approval from MQA?
+    - Procedure for programme approval
+
+# 3. HOW TO BECOMEcertified AN ACCREDITED TRAINING PROVIDER WITH THE MQA?
+- intent: faq/certified
+  examples: | 
+    - Training Provider
+    - Become a training provider 
+    - train students 
+    - Accreddited_provider
+    - How to become an accredited training provider with the MQA?
+    - Accreditation process with MQA
+    - Requirements for becoming an accredited training provider
+    - How can my company get accredited by MQA?
+    - Accreditation criteria for training providers
+
+# 4. HOW TO REGISTER AS A MODERATOR WITH THE MQA?
+# - intent: faq/register
+#   examples: |
+#     - How To Register As An [assessor](register_category) With The MQA
+#     - How To Register As A [moderator](register_category) With The MQA 
+#     - [assessor](register_category)
+#     - [moderator](register_category)
+#     - [learner](register_category)
+#     - [graduate](register_category)
+#     - how do I register
+#     - Register As An [assessor](register_category) With The MQA
+#     - Register As A [moderator](register_category) With The MQA 
+#     - Register As A [learner](register_category) With The MQA 
+#     - register
+
+- intent: faq/register_assessor
+  examples: |
+    - How to register as an assessor?
+    - Assessor registration process
+    - Becoming an assessor with the MQA
+    - Requirements for assessor registration
+
+- intent: faq/register_moderator
+  examples: |
+    - How to register as a moderator?
+    - Moderator registration process
+    - Becoming a moderator with the MQA
+    - Requirements for moderator registration
+
+- intent: faq/register_learner
+  examples: |
+    - How to register as a learner?
+    - Learner registration process
+    - Becoming a learner with the MQA
+    - Requirements for learner registration
+
+  # 5
+- intent: faq/mqa_certification
+  examples: |
+    - What is MQA certificate?
+    - Certification
+    - how to get certfied 
+    - What is MQA certificate?
+
+
+
+# 6. who qualifies for bursary?
+- intent: faq/bursary_qualifies
+  examples: |
+    - Who can apply for MQA bursary? 
+    - how to qualify for a busary
+    - Who can apply for MQA bursary?
+    - how do I aapply for bursary
+    - bursary infor
+
+  # 7
+
+
+- intent: faq/mqa_qualification
+  examples: | 
+    - Training Provider
+    - Become a training provider 
+    - train students 
+    - Accreddited provide
+
+#----------------------------Oppotunities -------------------------------------------------
+- intent: faq/career_opportunities 
+  examples: | 
+    - I available [vacancies](opportunity_type)?
+    - I am looking for an [internship](opportunity_type)
+    - Looking for avaiable [bursaries](opportunity_type) 
+    - Looking for avaiable [learnerships](opportunity_type) 
+    - recommend a [career](opportunity_type) in mining 
+    - [career](opportunity_type) in mining 
+    - [internship](opportunity_type)
+    - [jobs](opportunity_type)
+- intent: faq/career_internships
+  examples: |
+    - Criteria for internship programme
+    - Learner placement criteria for internship
+    - MQA internship criteria
+
+- intent: faq/career_vacancies
+  examples: |
+    - Vacancies in mining
+    - Available job openings
+    - Job vacancies in mining industry
+    - MQA job opportunities
+
+- intent: faq/career_learnership
+  examples: |
+    - Learnership details
+    - Mining learnership program
+    - MQA learnership information
+    - Employee training in mining
+
+- intent: faq/career_mining
+  examples: |
+    - Mining career options
+    - Careers in mining industry
+    - Opportunities in mining
+    - Jobs in mining sector
+
+- intent: faq/career_gallery
+  examples: |
+    - Career gallery
+    - Mining career showcase
+    - Job opportunities display
+    - MQA career exhibition
+#--------------------------------------------------------
+#----------------------Career Gudiance---------------------
+
+
+- intent: faq/career_guidance 
+  examples: |
+    - What are scarce skillsin mining?
+    - importent skills mining?
+    - guidance type
+    - career guide  
+    - prepare for an
+    - careers Brochure
+    - career guide mentorship
+    - career guide coaching
+    - career guide Coach
+
+- intent: faq/scarce_skills
+  examples: |
+    - Scarce skills in mining
+    - Skills shortage in mining industry
+    - Scarce skills needed in mining
+
+- intent: faq/certifications
+  examples: |
+    - MQA accreditation requirements
+    - Certification process with MQA
+    - Accreditation standards for MQA
+
+- intent: faq/cv
+  examples: |
+    - CV writing guidance
+    - How to write a CV
+    - Creating a resume
+    - Curriculum vitae tips
+
+- intent: faq/advice
+  examples: |
+    - advice e for career planning
+    - Career advice from MQA
+    - advice
+- intent: faq/mentorship
+  examples: |
+    - Workplace mentorship
+    - MQA mentorship program
+    - Mentorship opportunities in mining
+    - Becoming a mentor with MQA
+
+- intent: faq/interview_preparation
+  examples: |
+    - Interview preparation tips
+    - How to prepare for interviews
+    - Interview advice
+    - Interviewing skills
+    
+
+- intent: faq/scope_extension
+  examples: |
+    - what is the scope extension 
+    - extension
+    - scope extension
+
+
